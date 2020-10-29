@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {Link } from "react-router-dom";
 
 class Question extends React.Component {
 
@@ -14,7 +15,7 @@ class Question extends React.Component {
     
     
       getBlogPost = () => {
-        axios.get('https://team-toyota-api.herokuapp.com/questionid')
+        axios.get('https://team-toyota-api.herokuapp.com/question')
           .then((response) => {
             const data = response.data;
             this.setState({ posts: data });
@@ -94,7 +95,8 @@ class Question extends React.Component {
               </div>
          
     
-              <button>Submit</button><br></br>
+              <button>Submit</button>
+              <Link to="/answer"><button id="btn">Go to answers</button></Link> <br></br>
               Available Questions
             </form>
            

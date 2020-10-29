@@ -25,7 +25,6 @@ class Register extends React.Component {
             console.log('Data has been received!!');
           })
           .catch(() => {
-            alert('Error retrieving data!!!');
           });
       }
     
@@ -113,7 +112,7 @@ class Register extends React.Component {
                 </label><br></br>
                 <label>Password
                 <input 
-                  type="text"
+                  type="password"
                   name="password"
                   placeholder=""
                   id="pd"

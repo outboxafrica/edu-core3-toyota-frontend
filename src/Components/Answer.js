@@ -14,7 +14,7 @@ class Answer extends React.Component {
     
     
       getBlogPost = () => {
-        axios.get('https://kwash-api.herokuapp.com/questionid')
+        axios.get('https://team-toyota-api.herokuapp.com/answer')
           .then((response) => {
             const data = response.data;
             this.setState({ posts: data });
@@ -35,12 +35,12 @@ class Answer extends React.Component {
         event.preventDefault();
     
         const payload = {
-            answer: this.state. answer
+          answer: this.state.answer
         };
     
     
         axios({
-          url: 'https://kwash-api.herokuapp.com/questionid',
+          url: 'https://team-toyota-api.herokuapp.com/answer',
           method: 'POST',
           data: payload
         })
@@ -57,7 +57,7 @@ class Answer extends React.Component {
     
       resetUserInputs = () => {
         this.setState({
-            answer: ''
+          answer: ''
         });
       };
     
@@ -77,15 +77,16 @@ class Answer extends React.Component {
         console.log('State: ', this.state);
         return (
             <div className="app">
-            <h2>Welcome to the best app ever</h2>
+            <h2>Welcome to our app</h2>
             <form onSubmit={this.submit}>
              
               <div className="form-input">
-              <label>What is your  Answer?
+              <label>What is your Answer?
                 <input 
                   type="text"
-                  name=" answer"
+                  name="answer"
                   placeholder=""
+                  id="qn"
                   value={this.state.answer}
                   onChange={this.handleChange}
                 />
@@ -94,7 +95,7 @@ class Answer extends React.Component {
          
     
               <button>Submit</button><br></br>
-              Available  Answers
+              Available Answers
             </form>
            
              <div> {this.displayBlogPost(this.state.posts)}
