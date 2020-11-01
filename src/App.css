@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  background-color: #506cce;
+}
+form{
+  color: #ffffff;
+}
+body{
+  background-color: #506cce;
+}
+#emmail{
+  margin-left: 37px;
+  padding-bottom: 10px;
+}
+#namme{
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
+#pd{
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+small{
+  margin-left: 1rem;
+  color: rgb(4, 0, 255);
+  text-decoration: none;
+}
+button{
+  color:rgb(253, 253, 255);
+  background-color: blue;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 10px;
+}
+#qn{
+  margin-left: 10px;
+  padding: 10px;
+}
+#btn{
+margin-left: 10px;
+}
