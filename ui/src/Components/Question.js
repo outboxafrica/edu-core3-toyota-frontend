@@ -41,7 +41,7 @@ class Question extends React.Component {
     
     
         axios({
-          url: 'https://team-toyota-api.herokuapp.com/questionid',
+          url: 'https://team-toyota-api.herokuapp.com/question',
           method: 'POST',
           data: payload
         })

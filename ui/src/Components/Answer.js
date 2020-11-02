@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {Link } from "react-router-dom";
 
 class Answer extends React.Component {
 
@@ -94,8 +95,12 @@ class Answer extends React.Component {
               </div>
          
     
-              <button>Submit</button><br></br>
+              <button>Submit</button>
+              <Link to="/question">
+            <button id="btn">Go to Questions</button>
+            </Link><br></br>
               Available Answers
+           
             </form>
            
              <div> {this.displayBlogPost(this.state.posts)}
